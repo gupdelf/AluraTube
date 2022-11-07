@@ -1,0 +1,34 @@
+{
+    "name": "Gustavo Pott Delfino",
+    "job": "Técnico em Análise e Desenvolvimento de Sistemas",
+    "github": "gupdelf",
+    "colors":{
+
+    },
+    "playlists": {
+        "Top Fights": [
+            {
+                "title": "Baryon Mode Naruto vs Isshiki | Full Fight HD",
+                "url": "https://www.youtube.com/watch?v=lsir5YqqGL8",
+                "thumb": "https://criticalhits.com.br/wp-content/uploads/2021/12/Naruto_Baryon_Mode-1-768x403.png"
+            },
+            {
+                "title": "Yami & Asta Vs. Dante Full Fight | Black Clover - Episode 167 | ブラッククローバー 167話",
+                "url": "https://www.youtube.com/watch?v=SD3dT_kFKBM",
+                "thumb": "https://i3.ytimg.com/vi/SD3dT_kFKBM/maxresdefault.jpg"
+            },
+            {
+                "title": "Gai vs Madara | Naruto Shippuden",
+                "url": "https://www.youtube.com/watch?v=rJEuENSmRxQ",
+                "thumb": "https://i3.ytimg.com/vi/rJEuENSmRxQ/maxresdefault.jpg"
+            }
+        ],
+        "Best phonks": [
+            {
+                "title": "Titulo",
+                "url": "url",
+                "thumb": "imagem"
+            }
+        ]
+    }
+}
