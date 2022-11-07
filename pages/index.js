@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
+import { StyledFavorites } from "../src/components/Favorites";
 
 function HomePage() {
     const styleMain = {
@@ -104,5 +105,36 @@ function TimeLine(props) {
                 )
             })}
         </StyledTimeline>
+    )
+}
+
+function Favorites(props) {
+    const favoritesTitle = Object.keys(props.favorites)
+
+    return (
+        <StyledFavorites>
+             {favoritesTitle.map((FavSectionTitle) => {
+                const favorites = props.favorites[favoritesTitle];
+
+                return (
+                    <section>
+                        <h2>{FavSectionTitle}</h2>
+
+                        <div>
+                            {favorites.map((favorite) => {
+                                return (
+                                    <a href={favorite.url} target="_blank">
+                                        <img className="favorites-img" src={favorite.image}/>
+                                        <span>
+                                            @{favorite.user}
+                                        </span>
+                                    </a>
+                                )
+                            })}
+                        </div>
+                    </section>
+                )
+            })}
+        </StyledFavorites>
     )
 }
