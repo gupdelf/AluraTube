@@ -9,6 +9,7 @@ export const CSSReset = createGlobalStyle`
   }
   body {
     font-family: sans-serif;
+    overflow-x: hidden;
   }
   /* NextJS */
   html {
