@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import config from "../../config.json";
 
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  padding: 16px;
+  background-color: ${config.themes.light.backgroundLevel1};
+  padding: 25px 16px;
   overflow: hidden;
   h2 {
     font-size: 16px;
@@ -14,6 +16,7 @@ export const StyledTimeline = styled.div`
     aspect-ratio: 16/9;
     font-weight: 500;
     object-fit: cover;
+
     width: 100%;
     max-width: 210px;
     height: auto;
@@ -31,8 +34,7 @@ export const StyledTimeline = styled.div`
       grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
       grid-auto-flow: column;
       grid-auto-columns: minmax(200px,1fr);
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
+
       a {
         scroll-snap-align: start;
         span {

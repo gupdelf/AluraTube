@@ -48,9 +48,34 @@
         ],
         "Best phonks": [
             {
-                "title": "Phonk 1",
-                "url": "url",
-                "thumb": "imagem"
+                "title": "PLAYAMANE x Nateki - MIDNIGHT",
+                "url": "https://www.youtube.com/watch?v=iBv6kB7WxYg",
+                "thumb": "https://i3.ytimg.com/vi/iBv6kB7WxYg/maxresdefault.jpg"
+            },
+            {
+                "title": "MoonDeity - NEON BLADE",
+                "url": "https://www.youtube.com/watch?v=dvQJIgjlR3I",
+                "thumb": "https://i3.ytimg.com/vi/dvQJIgjlR3I/maxresdefault.jpg"
+            },
+            {
+                "title": "VTORNIK - Money Rain (Phonk Remix by DEMON BEATS)",
+                "url": "https://www.youtube.com/watch?v=dqEnqfsko08",
+                "thumb": "https://i3.ytimg.com/vi/dqEnqfsko08/maxresdefault.jpg"
+            },
+            {
+                "title": "Барбарики - PHONK REMIX(By LONE.OFF BEATS)",
+                "url": "https://www.youtube.com/watch?v=81ZB3oiOMLY",
+                "thumb": "http://i3.ytimg.com/vi/81ZB3oiOMLY/hqdefault.jpg"
+            },
+            {
+                "title": "Close Eyes",
+                "url": "https://www.youtube.com/watch?v=OSbhFr5TzkQ",
+                "thumb": "https://i3.ytimg.com/vi/OSbhFr5TzkQ/maxresdefault.jpg"
+            },
+            {
+                "title": "Suffer With Me",
+                "url": "https://www.youtube.com/watch?v=OgmMJGEhwxw",
+                "thumb": "https://i3.ytimg.com/vi/OgmMJGEhwxw/maxresdefault.jpg"
             }
         ]
     }
