@@ -16,9 +16,10 @@ function HomePage() {
         <>
             <CSSReset/>
             <div style={styleMain}>
-                <Menu />
                 <Header />
+                <Menu />
                 <TimeLine playlists={config.playlists} />
+                <Favorites favorites={config.favorites} />
             </div>
         </>
     )
@@ -26,10 +27,22 @@ function HomePage() {
 
 export default HomePage
 
-
+const allThemes = config.themes;
+//console.log(allThemes);
 
 const StyledHeader = styled.div`
-    img {
+    overflow:hidden;
+    #banner{
+        width: 100%;
+        max-height: 250px;
+        
+        object-fit: cover;
+        object-position: 0 80%;
+        @media only screen and (min-width: 1650px) {
+            max-height: 33vh;
+        }
+    }
+    section img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
@@ -38,7 +51,7 @@ const StyledHeader = styled.div`
         display: flex;
         align-items:center;
 
-        margin-top:50px;
+        background-color: ${allThemes.light.backgroundBase};
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
@@ -47,10 +60,10 @@ const StyledHeader = styled.div`
 function Header() {
     return (
         <StyledHeader>
-            {/*<img src="banner" />*/}
+            <img id='banner' src={config.banner} />
 
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
+                <img id="user-icon" src={`https://github.com/${config.github}.png`} />
                 <div>
                     <h2>{config.name}</h2>
                     <p>{config.job}</p>

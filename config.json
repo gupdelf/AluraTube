@@ -2,8 +2,31 @@
     "name": "Gustavo Pott Delfino",
     "job": "Técnico em Análise e Desenvolvimento de Sistemas",
     "github": "gupdelf",
-    "colors":{
-
+    "themes": {
+        "dark": {
+            "backgroundBase": "#181818",
+            "backgroundLevel1": "#202020",
+            "textColorBase": "#FFFFFF",
+            "borderBase": "#383838",
+            "backgroundLevel2": "#313131"
+        },
+        "light": {
+            "backgroundBase": "#FFFFFF",
+            "backgroundLevel1": "#F9F9F9",
+            "textColorBase": "#222222",
+            "borderBase": "#E5E5E5",
+            "backgroundLevel2": "#F0F0F0"
+        }
+    },
+    "banner": "https://images.unsplash.com/photo-1470093879860-2221625b28be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
+    "favorites": {
+        "AluraTube Favoritos": [
+            {
+                "user": "gupdelf",
+                "url": "https://github.com/gupdelf",
+                "image": "https://github.com/gupdelf.png"
+            }
+        ]
     },
     "playlists": {
         "Top Fights": [
