@@ -5,6 +5,9 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavorites } from "../src/components/Favorites";
 
+/* ----------------------------------------------------------------------------------------------- */
+
+// Home screen 'default' page
 function HomePage() {
     const styleMain = {
         display: "flex",
@@ -17,26 +20,29 @@ function HomePage() {
         <>
             <CSSReset/>
             <div style={styleMain}>
-                <Header />
                 <Menu />
+                <Header />
                 <TimeLine playlists={config.playlists} />
                 <Favorites favorites={config.favorites} />
             </div>
         </>
     )
 }
-
 export default HomePage
 
-const allThemes = config.themes;
-//console.log(allThemes);
+/* ----------------------------------------------------------------------------------------------- */
 
-const StyledHeader = styled.div`
+/** Seção Header
+ * Contém:
+ * - banner
+ * - foto do usuário
+ * - info usuario
+ */
+const StyledHeader = styled.div` // styled component do header
     overflow:hidden;
     #banner{
         width: 100%;
         max-height: 250px;
-        
         object-fit: cover;
         @media only screen and (min-width: 1650px) {
             max-height: 33vh;
@@ -50,18 +56,16 @@ const StyledHeader = styled.div`
     .user-info {
         display: flex;
         align-items:center;
-
-        background-color: ${allThemes.light.backgroundBase};
+        background-color: ${config.themes.light.backgroundBase};
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
     }
 `;
-function Header() {
+function Header() { // declaração do componente no react
     return (
         <StyledHeader>
             <img id='banner' src={config.banner} />
-
             <section className="user-info">
                 <img id="user-icon" src={`https://github.com/${config.github}.png`} />
                 <div>
@@ -73,12 +77,19 @@ function Header() {
     )
 }
 
+/* ----------------------------------------------------------------------------------------------- */
+
+/** Seção Timeline
+ * - É a section que contém os vídeos e praticamente todo o conteúdo
+ * - recebe uma array de playlists no param 'props'
+ */
 function TimeLine(props) {
     //console.log("Dentro do componente", props.playlists)
     const playlistNames = Object.keys(props.playlists)
 
-    return (
-        <StyledTimeline>
+    // Styled component gerado em src/components/Timeline.js
+    return ( 
+        <StyledTimeline> 
             {playlistNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
                 console.log("Videos", playlistName, videos)
@@ -107,6 +118,14 @@ function TimeLine(props) {
     )
 }
 
+/* ----------------------------------------------------------------------------------------------- */
+
+/** Seção favoritos
+ * - Contém uma foto do user github
+ * - o @ do dev mencionado
+ * - é alinhado em forma de grid e posteriormente deve haver interação
+ * - recebe como props, uma array dos favorites em config.json
+ */
 function Favorites(props) {
     const favoritesTitle = Object.keys(props.favorites)
 
@@ -137,3 +156,5 @@ function Favorites(props) {
         </StyledFavorites>
     )
 }
+
+/* ----------------------------------------------------------------------------------------------- */
