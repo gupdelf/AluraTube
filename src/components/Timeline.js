@@ -4,13 +4,14 @@ import config from "../../config.json";
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  background-color: ${config.themes.light.backgroundLevel1};
+  background-color: ${config.themes.dark.backgroundLevel1};
   padding: 25px 16px;
   overflow: hidden;
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
     text-transform: capitalize;
+
   }
   img {
     aspect-ratio: 16/9;
@@ -41,7 +42,7 @@ export const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
-          color: ${config.themes.light.textColorBase};
+          color: ${config.themes.dark.textColorBase};
         }
       }
     }

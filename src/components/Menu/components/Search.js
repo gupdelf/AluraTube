@@ -5,7 +5,7 @@ import config from "../../../../config.json"
 const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid ${config.themes.light.borderBase};
+  border: 1px solid ${config.themes.dark.borderBase};
   max-width: 425px;
   width: 100%;
   border-radius: 2px;
@@ -16,16 +16,16 @@ const StyledSearch = styled.div`
     padding: 4px 6px;
     border: none;
     outline: none;
-    color: ${config.themes.light.textColorBase};
-    background-color: ${config.themes.light.backgroundBase};
+    color: ${config.themes.dark.textColorBase};
+    background-color: ${config.themes.dark.backgroundBase};
   }
   button {
     flex: 1;
     cursor: pointer;
     border: none;
-    background-color: ${config.themes.light.backgroundLevel2};
+    background-color: ${config.themes.dark.backgroundLevel2};
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
-    border-left: 1px solid ${config.themes.light.borderBase};
+    border-left: 1px solid ${config.themes.dark.borderBase};
     width: 40px;
     height: 40px;
     @media (min-width: 600px) {

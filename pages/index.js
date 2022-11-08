@@ -17,13 +17,13 @@ function HomePage() {
         flex: 1
     };
     //console.log(config.playlists);
-    const [valorDoFiltro, setValorDoFiltro] = React.useState("Teste");
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("");
 
     return (
         <>
-            <CSSReset/>
+            <CSSReset />
             <div style={styleMain}>
-                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header />
                 <TimeLine searchValue={valorDoFiltro} playlists={config.playlists} />
                 <Favorites favorites={config.favorites} />
@@ -52,10 +52,16 @@ const StyledHeader = styled.div` // styled component do header
     .user-info {
         display: flex;
         align-items:center;
-        background-color: ${config.themes.light.backgroundBase};
+        background-color: ${config.themes.dark.backgroundBase};
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
+        h2, p {
+            color: ${config.themes.dark.textColorBase}
+        }
+    }
+    
+`;
 const StyledBanner = styled.div`
     width: 100%;
     height:230px;
@@ -86,42 +92,42 @@ function Header() { // declaração do componente no react
  * - É a section que contém os vídeos e praticamente todo o conteúdo
  * - recebe uma array de playlists no param 'props'
  */
-function TimeLine({searchValue, ...props}) {
+function TimeLine({ searchValue, ...props }) {
     //console.log("Dentro do componente", props.playlists)
     const playlistNames = Object.keys(props.playlists)
 
     // Styled component gerado em src/components/Timeline.js
-    return ( 
-        <StyledTimeline> 
+    return (
+        <StyledTimeline>
             {playlistNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
                 //console.log("Videos", playlistName, videos)
 
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
 
                         <div>
                             {videos
-                            .filter((video) =>{
-                                // convenção normalized
-                                // deixa todos os caracteres minusculos para filtrar melhor
-                                // remove o case sensitive
-                                const titleNormalized = video.title.toLowerCase();
-                                const searchValueNormalized = searchValue.toLowerCase();
+                                .filter((video) => {
+                                    // convenção normalized
+                                    // deixa todos os caracteres minusculos para filtrar melhor
+                                    // remove o case sensitive
+                                    const titleNormalized = video.title.toLowerCase();
+                                    const searchValueNormalized = searchValue.toLowerCase();
 
-                                return titleNormalized.includes(searchValueNormalized)
-                            })
-                            .map((video) => {
-                                return (
-                                    <a href={video.url} target="_blank">
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
+                                    return titleNormalized.includes(searchValueNormalized)
+                                })
+                                .map((video) => {
+                                    return (
+                                        <a key={video.url} href={video.url} target="_blank">
+                                            <img src={video.thumb} />
+                                            <span>
+                                                {video.title}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
                         </div>
 
                     </section>
@@ -144,7 +150,7 @@ function Favorites(props) {
 
     return (
         <StyledFavorites>
-             {favoritesTitle.map((FavSectionTitle) => {
+            {favoritesTitle.map((FavSectionTitle) => {
                 const favorites = props.favorites[favoritesTitle];
                 /**const teste = favorites.map(function (item) {
                 *    return item.user
@@ -152,14 +158,14 @@ function Favorites(props) {
                 *    console.log(teste)
                 */
                 return (
-                    <section>
+                    <section key="Favorites">
                         <h2>{FavSectionTitle}</h2>
 
-                        <div>
+                        <div key={FavSectionTitle}>
                             {favorites.map((item) => {
                                 return (
-                                    <a href={item.url} target="_blank">
-                                        <img className="favorites-img" src={`https://github.com/${item.user}.png`}/>
+                                    <a key={item.url} href={item.url} target="_blank">
+                                        <img className="favorites-img" src={`https://github.com/${item.user}.png`} />
                                         <span>
                                             @{item.user}
                                         </span>

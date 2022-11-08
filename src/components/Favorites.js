@@ -4,13 +4,14 @@ import config from "../../config.json"
 export const StyledFavorites = styled.div`
     width: 100%;
     display:block;
-    background-color: ${config.themes.light.backgroundLevel1};
+    background-color: ${config.themes.dark.backgroundLevel1};
     padding: 16px;
     overflow: hidden;
     h2 {
         font-size: 16px;
         margin-bottom: 16px;
         text-transform: capitalize;
+        
     }
     img {
         object-fit: cover;
@@ -32,10 +33,11 @@ export const StyledFavorites = styled.div`
         a {
             scroll-snap-align: start;
             text-align: center;
+            padding-left: 5px;
             span {
             padding-top: 8px;
             display: block;
-            color: ${config.themes.light.textColorBase};
+            color: ${config.themes.dark.textColorBase};
             }
         }
         }
