@@ -42,7 +42,7 @@
     </a>
     <span>-</span>
     <a href="https://github.com/gupdelf/AluraTube/releases" target="_blank">
-      Release documentations
+      Last Release Details
     </a>
 
 
