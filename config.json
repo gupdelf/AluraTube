@@ -23,8 +23,11 @@
         "AluraTube Favoritos": [
             {
                 "user": "gupdelf",
-                "url": "https://github.com/gupdelf",
-                "image": "https://github.com/gupdelf.png"
+                "url": "https://aluratube-xi.vercel.app/"
+            },
+            {
+                "user": "omariosouto",
+                "url": "https://aluratube.vercel.app/"
             }
         ]
     },
