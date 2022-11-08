@@ -43,18 +43,20 @@ export default HomePage
  */
 const StyledHeader = styled.div` // styled component do header
     overflow:hidden;
-
+    background-color: ${config.themes.dark.backgroundBase};
     section img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
     }
-    .user-info {
+
+    section {
         display: flex;
         align-items:center;
         background-color: ${config.themes.dark.backgroundBase};
         width: 100%;
         padding: 16px 32px;
+
         gap: 16px;
         h2, p {
             color: ${config.themes.dark.textColorBase}
@@ -77,7 +79,7 @@ function Header() { // declaração do componente no react
     return (
         <StyledHeader>
             <StyledBanner bg={config.bg} />
-            <section className="user-info">
+            <section className="comp">
                 <img id="user-icon" src={`https://github.com/${config.github}.png`} />
                 <div>
                     <h2>{config.name}</h2>
@@ -100,7 +102,7 @@ function TimeLine({ searchValue, ...props }) {
 
     // Styled component gerado em src/components/Timeline.js
     return (
-        <StyledTimeline>
+        <StyledTimeline className="comp">
             {playlistNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
                 //console.log("Videos", playlistName, videos)
@@ -151,7 +153,7 @@ function Favorites(props) {
     const favoritesTitle = Object.keys(props.favorites)
 
     return (
-        <StyledFavorites>
+        <StyledFavorites className="comp">
             {favoritesTitle.map((FavSectionTitle) => {
                 const favorites = props.favorites[favoritesTitle];
                 /**const teste = favorites.map(function (item) {
