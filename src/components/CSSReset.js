@@ -38,4 +38,12 @@ export const CSSReset = createGlobalStyle`
       opacity: .5;
     }
   }
+
+  .comp {
+    @media only screen and (min-width: 1650px) {
+      padding-left :7vw !important;
+      padding-right :7vw !important;
+    } 
+  }
+
 `;

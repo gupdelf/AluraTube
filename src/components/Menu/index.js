@@ -12,10 +12,11 @@ const StyledMenu = styled.header`
   background-color: ${config.themes.dark.backgroundLevel1};
   border: 1px solid ${config.themes.dark.borderBase};
   align-items: center;
-  padding: 0 16px;
+  padding: 0 32px;
   gap: 16px;
   position: fixed;
   width: 100%;
+
   .logo {
     width: 100%;
     max-width: 80px;
@@ -30,7 +31,7 @@ const StyledMenu = styled.header`
 
 export default function Menu({valorDoFiltro,setValorDoFiltro}) {
     return (
-        <StyledMenu>
+        <StyledMenu className="comp">
             <div>
                 <LogoDark />
             </div>
