@@ -4,6 +4,8 @@ import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavorites } from "../src/components/Favorites";
+import Search from "../src/components/Menu/components/Search";
+import React from "react";
 
 /* ----------------------------------------------------------------------------------------------- */
 
@@ -15,14 +17,15 @@ function HomePage() {
         flex: 1
     };
     //console.log(config.playlists);
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("Teste");
 
     return (
         <>
             <CSSReset/>
             <div style={styleMain}>
-                <Menu />
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
                 <Header />
-                <TimeLine playlists={config.playlists} />
+                <TimeLine searchValue={valorDoFiltro} playlists={config.playlists} />
                 <Favorites favorites={config.favorites} />
             </div>
         </>
@@ -83,7 +86,7 @@ function Header() { // declaração do componente no react
  * - É a section que contém os vídeos e praticamente todo o conteúdo
  * - recebe uma array de playlists no param 'props'
  */
-function TimeLine(props) {
+function TimeLine({searchValue, ...props}) {
     //console.log("Dentro do componente", props.playlists)
     const playlistNames = Object.keys(props.playlists)
 
@@ -92,14 +95,24 @@ function TimeLine(props) {
         <StyledTimeline> 
             {playlistNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
-                console.log("Videos", playlistName, videos)
+                //console.log("Videos", playlistName, videos)
 
                 return (
                     <section>
                         <h2>{playlistName}</h2>
 
                         <div>
-                            {videos.map((video) => {
+                            {videos
+                            .filter((video) =>{
+                                // convenção normalized
+                                // deixa todos os caracteres minusculos para filtrar melhor
+                                // remove o case sensitive
+                                const titleNormalized = video.title.toLowerCase();
+                                const searchValueNormalized = searchValue.toLowerCase();
+
+                                return titleNormalized.includes(searchValueNormalized)
+                            })
+                            .map((video) => {
                                 return (
                                     <a href={video.url} target="_blank">
                                         <img src={video.thumb} />
@@ -133,18 +146,22 @@ function Favorites(props) {
         <StyledFavorites>
              {favoritesTitle.map((FavSectionTitle) => {
                 const favorites = props.favorites[favoritesTitle];
-
+                /**const teste = favorites.map(function (item) {
+                *    return item.user
+                *   })
+                *    console.log(teste)
+                */
                 return (
                     <section>
                         <h2>{FavSectionTitle}</h2>
 
                         <div>
-                            {favorites.map((favorite) => {
+                            {favorites.map((item) => {
                                 return (
-                                    <a href={favorite.url} target="_blank">
-                                        <img className="favorites-img" src={`https://github.com/${favorite.user}.png`}/>
+                                    <a href={item.url} target="_blank">
+                                        <img className="favorites-img" src={`https://github.com/${item.user}.png`}/>
                                         <span>
-                                            @{favorite.user}
+                                            @{item.user}
                                         </span>
                                     </a>
                                 )
