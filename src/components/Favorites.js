@@ -35,7 +35,7 @@ export const StyledFavorites = styled.div`
             span {
             padding-top: 8px;
             display: block;
-            color: ${({ theme }) => theme.textColorBase || "#222222"};
+            color: ${config.themes.light.textColorBase};
             }
         }
         }
