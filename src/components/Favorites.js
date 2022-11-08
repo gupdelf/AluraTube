@@ -26,7 +26,7 @@ export const StyledFavorites = styled.div`
         width: 100%;
         padding: 0;
         overflow: hidden;
-        padding: 16px;
+        padding: 16px 0;
         div {
         width: auto;
         display: flex;
