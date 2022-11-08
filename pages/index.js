@@ -67,8 +67,10 @@ const StyledBanner = styled.div`
     height:230px;
     max-height: 250px;
     background-image: url(${({bg}) => bg});
+    background-position: center;
+    background-size: cover;
     @media only screen and (min-width: 1650px) {
-        max-height: 33vh;
+        max-height: 33vh;        
     }
 `;
 function Header() { // declaração do componente no react
