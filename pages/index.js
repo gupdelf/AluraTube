@@ -43,14 +43,7 @@ export default HomePage
  */
 const StyledHeader = styled.div` // styled component do header
     overflow:hidden;
-    #banner{
-        width: 100%;
-        max-height: 250px;
-        object-fit: cover;
-        @media only screen and (min-width: 1650px) {
-            max-height: 33vh;
-        }
-    }
+
     section img {
         width: 80px;
         height: 80px;
@@ -63,12 +56,19 @@ const StyledHeader = styled.div` // styled component do header
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
+const StyledBanner = styled.div`
+    width: 100%;
+    height:230px;
+    max-height: 250px;
+    background-image: url(${({bg}) => bg});
+    @media only screen and (min-width: 1650px) {
+        max-height: 33vh;
     }
 `;
 function Header() { // declaração do componente no react
     return (
         <StyledHeader>
-            <img id='banner' src={config.banner} />
+            <StyledBanner bg={config.bg} />
             <section className="user-info">
                 <img id="user-icon" src={`https://github.com/${config.github}.png`} />
                 <div>
