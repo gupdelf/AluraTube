@@ -33,7 +33,7 @@
   <h1>AluraTube</h1>
   
   <p>
-    Um projeto desenvolvido com Next.js e React.
+    Projeto desenvolvido com Next.JS e React durante programa de imersão em React, proposta pela Alura.
   </p>
 
   <h4>
