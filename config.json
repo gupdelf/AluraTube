@@ -18,7 +18,7 @@
             "backgroundLevel2": "#F0F0F0"
         }
     },
-    "banner": "https://images.unsplash.com/photo-1470093879860-2221625b28be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
+    "banner": "https://images.unsplash.com/photo-1484626753559-5fa3ea273ae8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     "favorites": {
         "AluraTube Favoritos": [
             {
@@ -29,21 +29,36 @@
         ]
     },
     "playlists": {
-        "Top Fights": [
+        "Expensive Houses": [
             {
-                "title": "Baryon Mode Naruto vs Isshiki | Full Fight HD",
-                "url": "https://www.youtube.com/watch?v=lsir5YqqGL8",
-                "thumb": "https://criticalhits.com.br/wp-content/uploads/2021/12/Naruto_Baryon_Mode-1-768x403.png"
+                "title": "$14,000,000! Beautiful Casa Lido waterfront home with the best panoramic views of Sarasota Bay, FL",
+                "url": "https://www.youtube.com/watch?v=YUffLBjAf2k",
+                "thumb": "https://i3.ytimg.com/vi/YUffLBjAf2k/maxresdefault.jpg"
             },
             {
-                "title": "Yami & Asta Vs. Dante Full Fight | Black Clover - Episode 167 | ブラッククローバー 167話",
-                "url": "https://www.youtube.com/watch?v=SD3dT_kFKBM",
-                "thumb": "https://i3.ytimg.com/vi/SD3dT_kFKBM/maxresdefault.jpg"
+                "title": "3933 Country Club Ln, Fort Lauderdale, FL 33308. Masterpiece at Enclave Coral Ridge Country Club",
+                "url": "https://www.youtube.com/watch?v=ynSGCuaw9L8",
+                "thumb": "https://i3.ytimg.com/vi/ynSGCuaw9L8/maxresdefault.jpg"
             },
             {
-                "title": "Gai vs Madara | Naruto Shippuden",
-                "url": "https://www.youtube.com/watch?v=rJEuENSmRxQ",
-                "thumb": "https://i3.ytimg.com/vi/rJEuENSmRxQ/maxresdefault.jpg"
+                "title": "924 Bel Air Road - Bel Air CA, 90077",
+                "url": "https://www.youtube.com/watch?v=7bz9OHp95js",
+                "thumb": "https://i3.ytimg.com/vi/7bz9OHp95js/maxresdefault.jpg"
+            },
+            {
+                "title": "SOLD | 822 Sarbonne Rd | Bel-Air | SP $75,000,000",
+                "url": "https://www.youtube.com/watch?v=X8-dKsLVJq8",
+                "thumb": "https://i3.ytimg.com/vi/X8-dKsLVJq8/maxresdefault.jpg"
+            },
+            {
+                "title": "SOLD | Highridge Drive | Beverly Hills | $16,500,000",
+                "url": "https://www.youtube.com/watch?v=hfRpz2MFtio",
+                "thumb": "https://i3.ytimg.com/vi/hfRpz2MFtio/maxresdefault.jpg"
+            },
+            {
+                "title": "SOLD | VILLA SARBONNE | BEL-AIR | $88M",
+                "url": "https://www.youtube.com/watch?v=rFHVbYeWqds",
+                "thumb": "http://i3.ytimg.com/vi/rFHVbYeWqds/hqdefault.jpg"
             }
         ],
         "Best phonks": [
