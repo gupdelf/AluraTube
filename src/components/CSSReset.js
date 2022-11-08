@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import config from "../../config.json"
 
 export const CSSReset = createGlobalStyle`
   /* Reset */
@@ -6,6 +7,7 @@ export const CSSReset = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: ${config.themes.dark.textColorBase}
   }
   body {
     font-family: sans-serif;
