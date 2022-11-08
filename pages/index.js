@@ -38,7 +38,6 @@ const StyledHeader = styled.div`
         max-height: 250px;
         
         object-fit: cover;
-        object-position: 0 80%;
         @media only screen and (min-width: 1650px) {
             max-height: 33vh;
         }
@@ -124,7 +123,7 @@ function Favorites(props) {
                             {favorites.map((favorite) => {
                                 return (
                                     <a href={favorite.url} target="_blank">
-                                        <img className="favorites-img" src={favorite.image}/>
+                                        <img className="favorites-img" src={`https://github.com/${favorite.user}.png`}/>
                                         <span>
                                             @{favorite.user}
                                         </span>
