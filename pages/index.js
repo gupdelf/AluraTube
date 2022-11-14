@@ -4,7 +4,6 @@ import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavorites } from "../src/components/Favorites";
-import Search from "../src/components/Menu/components/Search";
 import React from "react";
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -64,7 +63,7 @@ const StyledHeader = styled.div` // styled component do header
     }
     
 `;
-const StyledBanner = styled.div`
+const StyledBanner = styled.div` // styled component do banner
     width: 100%;
     height:230px;
     max-height: 250px;
