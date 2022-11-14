@@ -3,6 +3,9 @@
 import styled from "styled-components";
 import Search from "./components/Search";
 import config from "../../../config.json"
+import DarkModeSwitch from "./components/DarkModeSwitch";
+import React from "react";
+import { ColorModeContext } from "./components/ColorMode";
 
 const StyledMenu = styled.header` // styled component do menu
   display: flex;
@@ -29,18 +32,29 @@ const StyledMenu = styled.header` // styled component do menu
   }
 `;
 
-export default function Menu({valorDoFiltro,setValorDoFiltro}) {
+export default function Menu({ valorDoFiltro, setValorDoFiltro }) {
+    const contexto = React.useContext(ColorModeContext);
 
     return (
         <StyledMenu className="comp">
             <div>
-                <LogoLight />
+                <ThemeLogo contexto={contexto.mode}/>
             </div>
 
-            <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
-            <div></div>
+            <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
+            <DarkModeSwitch />
+            
         </StyledMenu>
     );
+}
+
+function ThemeLogo(props) {
+
+    if (props.contexto === "dark") {
+        return <LogoDark />
+    } else {
+        return <LogoLight />
+    }
 }
 
 function LogoLight() {
