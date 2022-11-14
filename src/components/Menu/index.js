@@ -9,8 +9,8 @@ const StyledMenu = styled.header` // styled component do menu
   flex-direction: row;
   height: 56px;
   justify-content: space-between;
-  background-color: ${config.themes.dark.backgroundLevel1};
-  border: 1px solid ${config.themes.dark.borderBase};
+  background-color: ${({ theme }) => theme.backgroundLevel1};
+  border: 1px solid ${({ theme }) => theme.borderBase};
   align-items: center;
   padding: 0 32px;
   gap: 16px;
@@ -24,16 +24,17 @@ const StyledMenu = styled.header` // styled component do menu
       max-width: 127px;
     }
     .text {
-      fill: ${config.themes.dark.textColorBase};
+      fill: ${({ theme }) => theme.textColorBase};
     }
   }
 `;
 
 export default function Menu({valorDoFiltro,setValorDoFiltro}) {
+
     return (
         <StyledMenu className="comp">
             <div>
-                <LogoDark />
+                <LogoLight />
             </div>
 
             <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>

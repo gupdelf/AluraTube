@@ -4,7 +4,7 @@ import config from "../../config.json"
 export const StyledFavorites = styled.div`
     width: 100%;
     display:block;
-    background-color: ${config.themes.dark.backgroundLevel1};
+    background-color: ${({ theme }) => theme.backgroundLevel1};
     padding: 16px;
     overflow: hidden;
     h2 {
@@ -37,7 +37,7 @@ export const StyledFavorites = styled.div`
             span {
             padding-top: 8px;
             display: block;
-            color: ${config.themes.dark.textColorBase};
+            color: ${({ theme }) => theme.textColorBase};
             }
         }
         }
