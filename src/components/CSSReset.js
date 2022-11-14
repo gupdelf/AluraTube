@@ -7,11 +7,13 @@ export const CSSReset = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: ${config.themes.dark.textColorBase}
+    color: ${({ theme }) => theme.textColorBase}
   }
   body {
     font-family: sans-serif;
     overflow-x: hidden;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
   /* NextJS */
   html {

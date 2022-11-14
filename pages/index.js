@@ -1,6 +1,5 @@
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavorites } from "../src/components/Favorites";
@@ -20,7 +19,6 @@ function HomePage() {
 
     return (
         <>
-            <CSSReset />
             <div style={styleMain}>
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header />
@@ -42,7 +40,7 @@ export default HomePage
  */
 const StyledHeader = styled.div` // styled component do header
     overflow:hidden;
-    background-color: ${config.themes.dark.backgroundBase};
+    background-color: ${({ theme }) => theme.backgroundBase};
     section img {
         width: 80px;
         height: 80px;
@@ -52,13 +50,13 @@ const StyledHeader = styled.div` // styled component do header
     section {
         display: flex;
         align-items:center;
-        background-color: ${config.themes.dark.backgroundBase};
+        background-color: ${({ theme }) => theme.backgroundBase};
         width: 100%;
         padding: 16px 32px;
 
         gap: 16px;
         h2, p {
-            color: ${config.themes.dark.textColorBase}
+            color: ${({ theme }) => theme.textColorBase}
         }
     }
     

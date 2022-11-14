@@ -4,7 +4,7 @@ import config from "../../config.json";
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  background-color: ${config.themes.dark.backgroundLevel1};
+  background-color: ${({ theme }) => theme.backgroundLevel1};
   padding: 25px 16px;
 
   h2 {
@@ -42,7 +42,7 @@ export const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
-          color: ${config.themes.dark.textColorBase};
+          color: ${({ theme }) => theme.textColorBase};
         }
       }
     }
