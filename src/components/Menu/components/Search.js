@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import config from "../../../../config.json"
 
-const StyledSearch = styled.div`
+const StyledSearch = styled.div` // styled component do campo de pesquisa
   display: flex;
   flex-direction: row;
   border: 1px solid ${config.themes.dark.borderBase};
@@ -35,7 +35,7 @@ const StyledSearch = styled.div`
   }
 `;
 
-export default function Search({ valorDoFiltro, setValorDoFiltro }) {
+export default function Search({ valorDoFiltro, setValorDoFiltro }) { // disposição do campo de pesquisa dentro do menu
     //const [valorDaBusca, setValorDaBusca] = React.useState("Teste");
     //console.log("Search", valorDaBusca)
     const valorDaBusca = valorDoFiltro;

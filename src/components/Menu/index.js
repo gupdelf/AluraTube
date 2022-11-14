@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Search from "./components/Search";
 import config from "../../../config.json"
 
-const StyledMenu = styled.header`
+const StyledMenu = styled.header` // styled component do menu
   display: flex;
   flex-direction: row;
   height: 56px;

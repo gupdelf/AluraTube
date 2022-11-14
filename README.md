@@ -33,7 +33,7 @@
   <h1>AluraTube</h1>
   
   <p>
-    Projeto desenvolvido com Next.JS e React durante programa de imersão em React, proposta pela Alura.
+    Aplicação React completa de um clone básico da página inicial do Youtube, construída com Next.js. Projeto proposto pela plataforma Alura durante programa de Imersão em React.
   </p>
 
   <h4>
